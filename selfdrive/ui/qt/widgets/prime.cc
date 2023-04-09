@@ -44,7 +44,7 @@ void PairingQRWidget::updateQrCode(const QString &text) {
   QImage im(sz, sz, QImage::Format_RGB32);
 
   QRgb black = qRgb(0, 0, 0);
-  QRgb white = qRgb(255, 255, 255);
+  QRgb white = qRgb(128, 128, 255);
   for (int y = 0; y < sz; y++) {
     for (int x = 0; x < sz; x++) {
       im.setPixel(x, y, qr.getModule(x, y) ? black : white);
