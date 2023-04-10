@@ -209,7 +209,7 @@ DevicePanel::DevicePanel(SettingsWindow *parent) : ListWidget(parent) {
   }
 
   if (Hardware::TICI()) {
-    auto regulatoryBtn = new ButtonControl(tr("Regulatory"), tr("VIEW"), "");
+    auto regulatoryBtn = new ButtonControl(tr("Regulatory fine print"), tr("VIEW"), "");
     connect(regulatoryBtn, &ButtonControl::clicked, [=]() {
       const std::string txt = util::read_file("../assets/offroad/fcc.html");
       ConfirmationDialog::rich(QString::fromStdString(txt), this);
